@@ -4,7 +4,8 @@ ThisBuild / scalaVersion := "3.1.3"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "ci-test"
+    name := "ci-test",
+    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % Test
   )
 
 wartremoverErrors ++= Warts.unsafe
