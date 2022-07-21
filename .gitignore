@@ -10,3 +10,4 @@ build
 .gradle
 .idea
 .bsp/
+/codecov

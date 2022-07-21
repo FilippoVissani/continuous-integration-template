@@ -1,3 +1,11 @@
-- name: Codecov
-  uses: codecov/codecov-action@v3.1.0
+name: Code Coverage
+on:
+  push: # On every push on any branch
+jobs:
+  Coverage: # Job name
+    runs-on:
+      ubuntu-latest
+    steps:
+      - name: Codecov
+      uses: codecov/codecov-action@v3.1.0
 
