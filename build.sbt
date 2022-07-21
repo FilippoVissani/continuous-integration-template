@@ -6,3 +6,5 @@ lazy val root = (project in file("."))
   .settings(
     name := "ci-test"
   )
+
+wartremoverErrors ++= Warts.unsafe
