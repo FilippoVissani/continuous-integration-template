@@ -8,12 +8,11 @@ lazy val root = (project in file("."))
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % Test
   )
 
-coverageFailOnMinimum := true
-coverageMinimumStmtTotal := 90
-coverageMinimumBranchTotal := 90
-coverageMinimumStmtPerPackage := 90
-coverageMinimumBranchPerPackage := 85
-coverageMinimumStmtPerFile := 85
-coverageMinimumBranchPerFile := 80
-
 wartremoverWarnings ++= Warts.unsafe
+
+jacocoReportSettings := JacocoReportSettings(
+  "Jacoco Coverage Report",
+  None,
+  JacocoThresholds(),
+  Seq(JacocoReportFormats.ScalaHTML, JacocoReportFormats.XML), // note XML formatter
+  "utf-8")

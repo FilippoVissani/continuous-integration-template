@@ -18,10 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2
-        - name: Run tests
-          run: sbt coverage test
         - name: Coverage Report
-          run: sbt coverageReport
+          run: sbt jacoco
         - name: "Upload coverage to Codecov"
           uses: "codecov/codecov-action@v2"
           with:
