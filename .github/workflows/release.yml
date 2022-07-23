@@ -2,20 +2,25 @@ name: Create Release
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: "Generate JAR"
+      - name: Generate JAR
         run: sbt assembly
-      - name: "Upload a Build Artifact"
+      - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: "ci-test"
+          name: ci-test
           path: ./target/scala-3.1.3/ci-test-assembly-0.1.0-SNAPSHOT.jar
       retention-days: 0

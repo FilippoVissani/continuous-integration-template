@@ -20,7 +20,7 @@ jobs:
         - uses: actions/checkout@v3
         - name: Coverage Report
           run: sbt jacoco
-        - name: "Upload coverage to Codecov"
-          uses: "codecov/codecov-action@v2"
+        - name: Upload coverage to Codecov
+          uses: codecov/codecov-action@v2
           with:
             fail_ci_if_error: true
