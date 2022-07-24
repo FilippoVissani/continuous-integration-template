@@ -24,8 +24,7 @@ jobs:
           cache: 'sbt'
       - name: Create Artifact
         run: sbt assembly
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.0
+      - name: Create Release
+        uses: ncipollo/release-action@v1
         with:
-          path: target/scala-3.1.3/ci-test-assembly-0.1.0-SNAPSHOT.jar
-          retention-days: 0
+          artifacts: "target/scala-3.1.3/ci-test-assembly-0.1.0-SNAPSHOT.jar"
