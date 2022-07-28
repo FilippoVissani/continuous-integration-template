@@ -9,3 +9,11 @@ lazy val root = (project in file("."))
   )
 
 wartremoverWarnings ++= Warts.unsafe
+
+coverageFailOnMinimum := true
+coverageMinimumStmtTotal := 90
+coverageMinimumBranchTotal := 90
+coverageMinimumStmtPerPackage := 90
+coverageMinimumBranchPerPackage := 85
+coverageMinimumStmtPerFile := 85
+coverageMinimumBranchPerFile := 80
