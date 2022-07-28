@@ -1,6 +1,6 @@
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "it.unibo"
-ThisBuild / scalaVersion := "3.1.3"
+ThisBuild / scalaVersion := "3.2.0-RC2"
 
 lazy val root = (project in file("."))
   .settings(
@@ -9,10 +9,3 @@ lazy val root = (project in file("."))
   )
 
 wartremoverWarnings ++= Warts.unsafe
-
-jacocoReportSettings := JacocoReportSettings(
-  "Jacoco Coverage Report",
-  None,
-  JacocoThresholds(),
-  Seq(JacocoReportFormats.ScalaHTML, JacocoReportFormats.XML), // note XML formatter
-  "utf-8")
