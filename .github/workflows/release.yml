@@ -18,6 +18,9 @@ jobs:
           distribution: 'temurin'
           cache: 'sbt'
 
+      - name: Coverage
+        run: sbt clean coverage test coverageReport
+
       - name: Create Artifact
         run: sbt assembly
 
