@@ -3,19 +3,30 @@ name: Code Coverage
 on:
   push:
     branches:
-      - develop
-  pull_request:
-    branches:
-      - develop
-
+      - '*'
+env:
+  PROJECT_NAME: ci-test
+  WORKFLOW: code-coverage
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+        java-version:
+          - 18
+        jdk-dist:
+          - temurin
+    runs-on: ${{ matrix.os }}
     steps:
-        - uses: actions/checkout@v3
-        - name: Coverage Report
-          run: sbt clean coverage test coverageReport
-        - name: Upload coverage to Codecov
-          uses: codecov/codecov-action@v2
-          with:
-            fail_ci_if_error: true
+      - name: Checkout
+      - uses: actions/checkout@v3
+      - name: Coverage Report
+        run: sbt clean coverage test coverageReport
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          fail_ci_if_error: true
