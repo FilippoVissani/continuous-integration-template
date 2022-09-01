@@ -6,7 +6,11 @@ on:
       - '*'
 
 jobs:
+  call-code-coverage-workflow:
+    uses: .github/workflows/code-coverage.yml@main
+
   build:
+    needs: call-code-coverage-workflow
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
