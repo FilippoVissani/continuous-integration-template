@@ -7,7 +7,7 @@ on:
 
 jobs:
   call-code-coverage-workflow:
-    uses: .github/workflows/code-coverage.yml@main
+    uses: ./code-coverage.yml@main
 
   build:
     needs: call-code-coverage-workflow
