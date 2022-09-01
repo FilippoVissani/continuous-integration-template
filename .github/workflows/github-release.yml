@@ -10,7 +10,6 @@ jobs:
     uses: ./.github/workflows/code-coverage.yml
 
   build:
-    needs: call-code-coverage-workflow
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
