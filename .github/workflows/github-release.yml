@@ -1,21 +1,13 @@
 name: Create Release
 
 on:
-  workflow_run:
-    workflows:
-      - code-coverage
-    types:
-      - completed
-    branches:
-      - master
-env:
-  PROJECT_NAME: ci-test
-  WORKFLOW: github-release
+  push:
+    tags:
+      - '*'
+
 jobs:
-  github-release:
-    name: Create GitHub Release
+  build:
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success'
     steps:
       - uses: actions/checkout@v3
 
@@ -25,6 +17,9 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: 'sbt'
+
+      - name: Coverage
+        run: sbt clean coverage test coverageReport
 
       - name: Create Artifact
         run: sbt assembly
