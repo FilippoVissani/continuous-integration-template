@@ -1,4 +1,4 @@
-name: Create Release
+name: GitHub Release
 
 on:
   push:
@@ -17,9 +17,6 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: 'sbt'
-
-      - name: Coverage
-        run: sbt clean coverage test coverageReport
 
       - name: Create Artifact
         run: sbt assembly
