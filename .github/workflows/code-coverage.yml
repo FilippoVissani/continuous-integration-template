@@ -3,24 +3,12 @@ name: code-coverage
 on:
   push:
     branches:
-      - '*'
-env:
-  PROJECT_NAME: ci-test
-  WORKFLOW: code-coverage
+      - 'develop'
+  workflow_call:
+
 jobs:
-  test:
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - ubuntu-latest
-          - windows-latest
-          - macos-latest
-        java-version:
-          - 18
-        jdk-dist:
-          - temurin
-    runs-on: ${{ matrix.os }}
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Coverage Report
