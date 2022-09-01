@@ -1,4 +1,4 @@
-name: code-coverage
+name: Code Coverage
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_call:
 
 jobs:
-  build:
+  code-coverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
