@@ -9,6 +9,13 @@ lazy val root = (project in file("."))
     libraryDependencies += "org.scala-lang" %% "scala3-library" % "3.2.0"
 )
 
+lazy val app = (project in file("app"))
+  .settings(
+    assembly / mainClass := Some("it.unibo.test.Main"),
+    assembly / assemblyJarName := "ci-test.jar",
+    assembly / test := (Test / test).value,
+  )
+
 coverageFailOnMinimum := true
 coverageMinimumStmtTotal := 90
 coverageMinimumBranchTotal := 90
