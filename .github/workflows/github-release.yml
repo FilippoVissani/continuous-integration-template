@@ -24,7 +24,7 @@ jobs:
       - uses: actions/upload-artifact@v3.1.0
         with:
           name: release
-          path: target/scala-3.2.0-RC2/ci-test-assembly-0.1.0-SNAPSHOT.jar
+          path: target/scala-3.2.0/ci-test.jar
 
   tagged-release:
     name: Create release
@@ -35,9 +35,9 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: release
-          path: target/scala-3.2.0-RC2/ci-test-assembly-0.1.0-SNAPSHOT.jar
+          path: target/scala-3.2.0/ci-test.jar
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
-          files: target/scala-3.2.0-RC2/ci-test-assembly-0.1.0-SNAPSHOT.jar
+          files: target/scala-3.2.0/ci-test.jar
