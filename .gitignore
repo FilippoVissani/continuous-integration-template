@@ -11,3 +11,6 @@ build
 .idea
 .bsp/
 /codecov
+.metals/
+.vscode/
+metals.sbt
