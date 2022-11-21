@@ -11,11 +11,3 @@ lazy val root = (project in file("."))
     assembly / assemblyJarName := "ci-test.jar",
     assembly / test := (Test / test).value,
 )
-
-coverageFailOnMinimum := true
-coverageMinimumStmtTotal := 90
-coverageMinimumBranchTotal := 90
-coverageMinimumStmtPerPackage := 90
-coverageMinimumBranchPerPackage := 85
-coverageMinimumStmtPerFile := 85
-coverageMinimumBranchPerFile := 80
