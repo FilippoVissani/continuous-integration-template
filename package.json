@@ -20,16 +20,12 @@
           "preset": "angular",
           "releaseRules": [
             {
-              "breaking": true,
-              "release": "major"
-            },
-            {
               "type": "build",
               "release": "patch"
             },
             {
               "type": "chore",
-              "release": false
+              "release": "patch"
             },
             {
               "type": "ci",
@@ -53,15 +49,15 @@
             },
             {
               "type": "refactor",
-              "release": false
+              "release": "patch"
             },
             {
               "type": "style",
-              "release": false
+              "release": "patch"
             },
             {
               "type": "test",
-              "release": false
+              "release": "patch"
             },
             {
               "type": "revert",
@@ -71,8 +67,7 @@
           "parserOpts": {
             "noteKeywords": [
               "BREAKING CHANGE",
-              "BREAKING CHANGES",
-              "BREAKING"
+              "BREAKING CHANGES"
             ]
           }
         }
