@@ -1,5 +1,5 @@
 {
-  "name": "ci-test",
+  "name": "continuous-integration-template",
   "devDependencies": {
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/exec": "6.0.3",
@@ -102,7 +102,7 @@
         {
           "assets": [
             {
-              "path": "target/scala-3.2.0/ci-test.jar",
+              "path": "target/scala-3.2.0/continuous-integration-template.jar",
               "label": "CI Test"
             }
           ]
