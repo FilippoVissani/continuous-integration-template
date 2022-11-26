@@ -20,6 +20,10 @@
           "preset": "angular",
           "releaseRules": [
             {
+              "type": "breaking",
+              "release": "major"
+            },
+            {
               "type": "build",
               "release": "patch"
             },
@@ -67,7 +71,8 @@
           "parserOpts": {
             "noteKeywords": [
               "BREAKING CHANGE",
-              "BREAKING CHANGES"
+              "BREAKING CHANGES",
+              "BREAKING"
             ]
           }
         }
