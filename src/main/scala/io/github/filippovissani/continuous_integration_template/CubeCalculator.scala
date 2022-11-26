@@ -1,4 +1,4 @@
-package it.unibo.test
+package io.github.filippovissani.continuous_integration_template
 
 object CubeCalculator:
 

@@ -1,4 +1,4 @@
-package it.unibo.test
+package io.github.filippovissani.continuous_integration_template
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
