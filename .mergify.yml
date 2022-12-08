@@ -1,8 +1,7 @@
 pull_request_rules:
   - name: Automatic merge on approval
     conditions:
-      - check-success=run-tests
-      - check-success=Semantic PR
+      - "#approved-reviews-by>=1"
     actions:
       merge:
         method: rebase
