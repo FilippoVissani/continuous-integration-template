@@ -1,3 +1,5 @@
+import sbtsonar.SonarPlugin.autoImport.sonarProperties
+
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "it.unibo"
 ThisBuild / scalaVersion := "3.2.0"
