@@ -1,8 +1,4 @@
 {
-  "image": "filippovissani/docker-jvm:1.20221211.1021",
-  "features": {
-    "ghcr.io/devcontainers/features/sshd:1": {
-        "version": "latest"
-    }
-  }
+  "image": "filippovissani/docker-jvm:latest",
+  "features": {}
 }
