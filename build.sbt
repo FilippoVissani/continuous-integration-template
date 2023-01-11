@@ -8,7 +8,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "continuous-integration-template",
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15" % Test,
-    libraryDependencies += "org.scala-lang" %% "scala3-library" % "3.2.1",
+    libraryDependencies += "org.scala-lang" %% "scala3-library" % "3.2.2",
     assembly / mainClass := Some("io.github.filippovissani.continuous_integration_template.Main"),
     assembly / assemblyJarName := "continuous-integration-template.jar",
     assembly / test := (Test / test).value,
