@@ -6,7 +6,7 @@
     "@semantic-release/git": "10.0.1"
   },
   "engines": {
-    "node": "18.14"
+    "node": "18.15"
   },
   "release": {
     "tagFormat": "${version}",
