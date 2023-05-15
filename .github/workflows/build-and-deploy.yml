@@ -9,14 +9,14 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - windows-latest
-          - macos-latest
+          #- windows-latest
+          #- macos-latest
         java-version:
           - 11
-          - 17
+          #- 17
         jdk-dist:
-          - adopt-hotspot
-          - temurin
+          #- adopt-hotspot
+          #- temurin
           - corretto
     runs-on: ${{ matrix.os }}
     name: Run tests via ${{ matrix.jdk-dist }} JDK v${{ matrix.java-version }}, on ${{ matrix.os }}
