@@ -27,7 +27,7 @@ config.plugins.push(
     }],
     ["@semantic-release/github", {
         "assets": [
-            { "path": "build/libs/*.jar" },
+            { "path": "/target/scala-3.2.2/*.jar" },
         ]
     }],
     ["@semantic-release/git", {
