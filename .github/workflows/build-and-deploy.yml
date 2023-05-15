@@ -98,6 +98,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          PGP_PASSPHRASE: ${{ secrets.SIGNING_PASSWORD }}
         run: |
           npm install
           npx semantic-release --dry-run
@@ -133,6 +134,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           MAVEN_CENTRAL_USERNAME: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          PGP_PASSPHRASE: ${{ secrets.SIGNING_PASSWORD }}
         run: |
           npm install
           npx semantic-release
