@@ -43,10 +43,11 @@ jobs:
       - name: create SBT configuration
         run: |
           mkdir -p $HOME/.sbt/1.0/
-          echo 'credentials += Credentials("Sonatype Nexus Repository Manager",' >> $HOME/.sbt/1.0/sonatype.sbt
-          echo '"oss.sonatype.org",' >> $HOME/.sbt/1.0/sonatype.sbt
-          echo '"${{ secrets.MAVEN_CENTRAL_USERNAME }}",' >> $HOME/.sbt/1.0/sonatype.sbt
-          echo '"${{ secrets.MAVEN_CENTRAL_PASSWORD }}")' >> $HOME/.sbt/1.0/sonatype.sbt
+          echo "credentials += Credentials(
+          \"Sonatype Nexus Repository Manager\",
+          \"oss.sonatype.org\",
+          \"${{ secrets.MAVEN_CENTRAL_USERNAME }}\",
+          \"${{ secrets.MAVEN_CENTRAL_PASSWORD }}\")" >> $HOME/.sbt/1.0/sonatype.sbt
 
   import-gpg:
     runs-on: ubuntu-latest
@@ -60,6 +61,8 @@ jobs:
           passphrase: ${{ secrets.SIGNING_PASSWORD }}
       - name: List keys
         run: gpg -K
+      - name: Set default key for signing
+        run: echo "default-key ${{ secrets.SIGNING_KEY_ID }}" >> $HOME/.gnupg/gpg.conf
 
   test-release:
     name: Test Release
