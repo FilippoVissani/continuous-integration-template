@@ -92,6 +92,7 @@ jobs:
         run: |
           npm install
           npx semantic-release --dry-run
+          gpg --list-keys
 
   release:
     if: github.event_name == 'push'
