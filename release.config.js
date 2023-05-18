@@ -1,6 +1,6 @@
 const config = require('semantic-release-preconfigured-conventional-commits')
 const verifyReleaseCommands = `
-cat ~/.gnupg/gpg.conf
+cat ~/.gnupg/options
 sed -i 's/version :=.*/version := "\${nextRelease.version}"/g' build.sbt || exit 1
 git add build.sbt || exit 2
 git commit -m "chore: [skip ci] update version in build.sbt" || exit 3
