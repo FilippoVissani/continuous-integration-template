@@ -14,3 +14,4 @@ build
 .metals/
 .vscode/
 metals.sbt
+node_modules/
