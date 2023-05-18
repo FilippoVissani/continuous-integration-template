@@ -12,5 +12,3 @@ lazy val root = (project in file("."))
     assembly / assemblyJarName := "continuous-integration-template.jar",
     assembly / test := (Test / test).value,
 )
-
-usePgpKeyHex("75792BDCABA9F241CD0FE833BC26FFD38D9B20FF")
