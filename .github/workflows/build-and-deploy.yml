@@ -82,7 +82,6 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.SIGNING_KEY }}
           passphrase: ${{ secrets.SIGNING_PASSWORD }}
-          fingerprint: "5D0DA9416A115886"
       - name: Deploy
         env:
           GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
@@ -123,7 +122,6 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.SIGNING_KEY }}
           passphrase: ${{ secrets.SIGNING_PASSWORD }}
-          fingerprint: "5D0DA9416A115886"
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
