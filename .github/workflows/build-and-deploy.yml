@@ -82,8 +82,7 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.SIGNING_KEY }}
           passphrase: ${{ secrets.SIGNING_PASSWORD }}
-      - name: Set default key
-        run: echo "default-key BC26FFD38D9B20FF" > ~/.gnupg/options
+          fingerprint: "75792BDCABA9F241CD0FE833BC26FFD38D9B20FF"
       - name: Deploy
         env:
           GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
@@ -124,8 +123,7 @@ jobs:
         with:
           gpg_private_key: ${{ secrets.SIGNING_KEY }}
           passphrase: ${{ secrets.SIGNING_PASSWORD }}
-      - name: Set default key
-        run: echo "default-key BC26FFD38D9B20FF" > ~/.gnupg/options
+          fingerprint: "75792BDCABA9F241CD0FE833BC26FFD38D9B20FF"
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
