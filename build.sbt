@@ -12,3 +12,10 @@ lazy val root = (project in file("."))
     assembly / assemblyJarName := "continuous-integration-template.jar",
     assembly / test := (Test / test).value,
 )
+
+credentials += Credentials(
+  "GnuPG Key ID",
+  "gpg",
+  "BC26FFD38D9B20FF", // key identifier
+  "ignored" // this field is ignored; passwords are supplied by pinentry
+)
