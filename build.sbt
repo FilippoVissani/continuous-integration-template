@@ -1,5 +1,5 @@
 ThisBuild / organization := "io.github.rustfields"
-ThisBuild / scalaVersion := "3.2.2"
+ThisBuild / scalaVersion := "3.3.0"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org"
 
