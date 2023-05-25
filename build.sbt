@@ -4,7 +4,6 @@ sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 lazy val root = (project in file("."))
   .settings(
     name := "continuous-integration-template",
-    publishTo := sonatypePublishToBundle.value,
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % Test,
     assembly / mainClass := Some("io.github.filippovissani.continuous_integration_template.Main"),
     assembly / assemblyJarName := "continuous-integration-template.jar",
