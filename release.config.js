@@ -1,8 +1,8 @@
 const config = require('semantic-release-preconfigured-conventional-commits')
 const publishCommands = `
 git tag -a -f \${nextRelease.version} \${nextRelease.version} -F CHANGELOG.md  || exit 1
-sbt ci-release || exit 3
 git push --force origin \${nextRelease.version} || exit 4
+sbt ci-release || exit 3
 `
 const releaseBranches = ["main"]
 config.branches = releaseBranches
