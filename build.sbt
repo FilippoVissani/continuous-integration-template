@@ -1,3 +1,6 @@
+ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org"
+sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
+
 inThisBuild(
   List(
     organization := "io.github.filippovissani",
@@ -21,8 +24,6 @@ inThisBuild(
       )
     ),
     scalaVersion := "3.2.2",
-    ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org",
-    sonatypeRepository := "https://s01.oss.sonatype.org/service/local",
   )
 )
 
