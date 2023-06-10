@@ -73,7 +73,7 @@ jobs:
       cancel-in-progress: false
     steps:
       - name: Checkout the repository
-        uses: danysk/action-checkout@0.2.9
+        uses: danysk/action-checkout@0.2.10
         with:
           token: ${{ secrets.GH_ACCESS_TOKEN }}
       - name: Setup Scala
